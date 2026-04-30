@@ -5,3 +5,9 @@ python-dotenv
 anthropic
 
 groq
+
+langchain-openai
+
+langchain-anthropic
+
+langchain-google-genai
