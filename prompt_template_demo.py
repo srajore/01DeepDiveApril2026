@@ -1,5 +1,9 @@
 from langchain_core.prompts import PromptTemplate
 
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
+
 from langchain_ollama import ChatOllama
 
 llm = ChatOllama(model="gpt-oss:120b-cloud")

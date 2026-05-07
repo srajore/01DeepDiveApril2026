@@ -17,3 +17,5 @@ langchain-ollama
 openai
 
 langchain-huggingface
+
+langsmith
