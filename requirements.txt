@@ -15,3 +15,5 @@ langchain-google-genai
 langchain-ollama
 
 openai
+
+langchain-huggingface
