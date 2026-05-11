@@ -9,7 +9,7 @@ from langchain_ollama import ChatOllama
 def initialize_llm() -> ChatOllama:
     """Initializes and returns the ChatOllama model instance."""
     try:
-        return ChatOllama(model="gpt-oss:120b-cloud")
+        return ChatOllama(model="gpt-oss:120b-cloud")   
     except Exception as e:
         print(f"Error: Failed to initialize LLM: {e}")
         sys.exit(1)
