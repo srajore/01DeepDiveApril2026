@@ -1,3 +1,4 @@
+#GOOGLE_API_KEY="AIzaSyDH_yYSw9svbe5KhSNEFd-7rknXAWrCo80"
 import sys
 from typing import Any
 from dotenv import load_dotenv
