@@ -8,17 +8,17 @@ import streamlit as st
 load_dotenv()
 
 from langchain_core.prompts import ChatPromptTemplate
-#from langchain_ollama import ChatOllama
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_ollama import ChatOllama
+#from langchain_google_genai import ChatGoogleGenerativeAI
 
 
 # -------------------------------
 # LLM Initialization
 # -------------------------------
 @st.cache_resource
-def initialize_llm() -> ChatGoogleGenerativeAI:
+def initialize_llm() -> ChatOllama:
     try:
-        return ChatGoogleGenerativeAI(model="gemini-3-flash-preview")
+        return ChatOllama(model="gpt-oss:120b-cloud")
     except Exception as e:
         st.error(f"Failed to initialize LLM: {e}")
         st.stop()
@@ -37,7 +37,7 @@ def create_prompt() -> ChatPromptTemplate:
 # -------------------------------
 # Chain Builder
 # -------------------------------
-def build_chain(prompt: ChatPromptTemplate, llm: ChatGoogleGenerativeAI) -> Any:
+def build_chain(prompt: ChatPromptTemplate, llm: ChatOllama) -> Any:
     return prompt | llm
 
 
